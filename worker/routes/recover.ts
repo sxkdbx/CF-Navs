@@ -27,7 +27,7 @@ const MIN_PASSWORD_LENGTH = 8
 const MAX_PASSWORD_LENGTH = 12
 const CONTROL_CHARACTERS = /\p{Cc}/u
 
-// 恢复端点专用密码策略（有意区别于 /install 的 12–256）：长度 8–12，且至少包含
+// 恢复端点专用密码策略（有意区别于 /install 的 1–256）：长度 8–12，且至少包含
 // 小写/大写/数字/符号 四类中的两类。登录不再校验长度，此策略不影响后续登录。
 export function isValidRecoverPassword(value: unknown): value is string {
   if (typeof value !== 'string') return false
