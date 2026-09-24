@@ -81,8 +81,8 @@
       localError = '请输入管理员用户名。'
       return
     }
-    if (password.length < 12) {
-      localError = '管理员密码至少需要 12 个字符。'
+    if (password.length < 1) {
+      localError = '管理员密码至少需要 1 个字符。'
       return
     }
     if (password !== passwordConfirmation) {
@@ -177,7 +177,7 @@
             type="password"
             bind:value={password}
             autocomplete="new-password"
-            minlength="12"
+            minlength="1"
             maxlength="256"
             required
             disabled={installing}
@@ -191,7 +191,7 @@
             type="password"
             bind:value={passwordConfirmation}
             autocomplete="new-password"
-            minlength="12"
+            minlength="1"
             maxlength="256"
             required
             disabled={installing}
